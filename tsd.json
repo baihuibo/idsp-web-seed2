@@ -1,0 +1,63 @@
+{
+  "version": "v4",
+  "repo": "borisyankov/DefinitelyTyped",
+  "ref": "master",
+  "path": "typings",
+  "bundle": "typings/tsd.d.ts",
+  "installed": {
+    "angularjs/angular.d.ts": {
+      "commit": "bac569d9ac44131864632d07b9e4c6f8af2d9432"
+    },
+    "jquery/jquery.d.ts": {
+      "commit": "bac569d9ac44131864632d07b9e4c6f8af2d9432"
+    },
+    "core-js/core-js.d.ts": {
+      "commit": "5d1623c5cce5a01f8e55dece86e06fe2c32dc763"
+    },
+    "bootstrap/bootstrap.d.ts": {
+      "commit": "5d1623c5cce5a01f8e55dece86e06fe2c32dc763"
+    },
+    "lodash/lodash.d.ts": {
+      "commit": "5d1623c5cce5a01f8e55dece86e06fe2c32dc763"
+    },
+    "moment/moment.d.ts": {
+      "commit": "5d1623c5cce5a01f8e55dece86e06fe2c32dc763"
+    },
+    "moment/moment-node.d.ts": {
+      "commit": "5d1623c5cce5a01f8e55dece86e06fe2c32dc763"
+    },
+    "angularjs/angular-resource.d.ts": {
+      "commit": "b779ab60e502ffdfb11db0add6c4df95453b3bdd"
+    },
+    "angularjs/angular-sanitize.d.ts": {
+      "commit": "b779ab60e502ffdfb11db0add6c4df95453b3bdd"
+    },
+    "angularjs/angular-route.d.ts": {
+      "commit": "b779ab60e502ffdfb11db0add6c4df95453b3bdd"
+    },
+    "angular-material/angular-material.d.ts": {
+      "commit": "bac569d9ac44131864632d07b9e4c6f8af2d9432"
+    },
+    "angular-ui-router/angular-ui-router.d.ts": {
+      "commit": "bac569d9ac44131864632d07b9e4c6f8af2d9432"
+    },
+    "mocha/mocha.d.ts": {
+      "commit": "1b21ed5d2ed3afb3b2be9a3ef8b17ae2a52a4c27"
+    },
+    "sinon/sinon.d.ts": {
+      "commit": "1b21ed5d2ed3afb3b2be9a3ef8b17ae2a52a4c27"
+    },
+    "chai/chai.d.ts": {
+      "commit": "1b21ed5d2ed3afb3b2be9a3ef8b17ae2a52a4c27"
+    },
+    "assertion-error/assertion-error.d.ts": {
+      "commit": "1b21ed5d2ed3afb3b2be9a3ef8b17ae2a52a4c27"
+    },
+    "jasmine/jasmine.d.ts": {
+      "commit": "1b21ed5d2ed3afb3b2be9a3ef8b17ae2a52a4c27"
+    },
+    "node/node.d.ts": {
+      "commit": "1b21ed5d2ed3afb3b2be9a3ef8b17ae2a52a4c27"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./bundle/common.bundle.js.bundle.css">
+    <link rel="stylesheet" href="./bundle/index.bundle.css">
+</head>
+<body>
+
+name = {{name}}
+
+<ul>
+    <li><a ui-sref="page1" ng-class="{active : $state.includes('page1')}">page1</a></li>
+    <li><a ui-sref="page2" ng-class="{active : $state.includes('page2')}">page2</a></li>
+</ul>
+
+<ui-view></ui-view>
+
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/angular/angular.js"></script>
+<script src="./resource/config.js"></script>
+<script src="./bundle/common.bundle.js"></script>
+<script src="./bundle/index.bundle.js"></script>
+</body>
+</html>

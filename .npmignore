@@ -1,0 +1,5 @@
+.idea
+.svn
+.git
+bundle
+node_modules
