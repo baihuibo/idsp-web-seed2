@@ -10,20 +10,22 @@
 npm install webpack -g
 ```
 
-然后在项目中依赖此部件:
+然后下载此项目:
 ```bash
 cd your/project/webapp
-npm install idsp-web-seed2 --save
+git clone https://github.com/baihuibo/idsp-web-seed2.git .
 ```
 
 它会自动创建好目录结构
 
 # 开始使用
 
+安装项目开发依赖模块后
+
 启用 `webpack` 编译即可立刻开始开发工作
 
 ```bash
-cd your/project/webapp
+npm install
 webpack --watch
 ```
 
