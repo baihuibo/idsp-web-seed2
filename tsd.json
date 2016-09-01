@@ -53,9 +53,6 @@
     "assertion-error/assertion-error.d.ts": {
       "commit": "1b21ed5d2ed3afb3b2be9a3ef8b17ae2a52a4c27"
     },
-    "jasmine/jasmine.d.ts": {
-      "commit": "1b21ed5d2ed3afb3b2be9a3ef8b17ae2a52a4c27"
-    },
     "node/node.d.ts": {
       "commit": "1b21ed5d2ed3afb3b2be9a3ef8b17ae2a52a4c27"
     }

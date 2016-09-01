@@ -10,4 +10,6 @@
 /// <reference path="angular-material/angular-material.d.ts" />
 /// <reference path="angular-ui-router/angular-ui-router.d.ts" />
 /// <reference path="core-js/core-js.d.ts" />
-
+/// <reference path="chai/chai.d.ts" />
+/// <reference path="mocha/mocha.d.ts" />
+/// <reference path="sinon/sinon.d.ts" />
