@@ -40,7 +40,7 @@ module.exports = {
             {test: /\.ts$/, loader: 'ng-annotate!ts-loader'},
             {test: /\.json$/, loader: 'json-loader'},
             {test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader")},
-            {test: /\.less$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader", "less-loader")},
+            {test: /\.less$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader")},
             {test: /\.html/, loader: 'html-loader'},
             {test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=20000&name=[path][name].[ext]'}
         ]
