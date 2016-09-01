@@ -13,7 +13,10 @@ npm install webpack -g
 然后下载此项目:
 ```bash
 cd your/project/webapp
-git clone https://github.com/baihuibo/idsp-web-seed2.git .
+git clone https://github.com/baihuibo/idsp-web-seed2.git
+mv idsp-web-seed2/.git .
+rm -rf idsp-web-seed2
+git pull
 ```
 
 它会自动创建好目录结构
