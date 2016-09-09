@@ -2,9 +2,6 @@
 
 import {bootstrap} from "angular";
 import {BeforeConfig} from "./common/annotation";
-import "./common/directives/directives";
-import "./common/filters";
-import "./common/services";
 import "./views/views";
 import "./views/global";
 import "bootstrap/dist/css/bootstrap.min.css";

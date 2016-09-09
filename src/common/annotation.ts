@@ -27,8 +27,23 @@ export function Route(option) {
         if (!option) {
             return;
         }
-        if (!option.controller) {
-            option.controller = target.name;
+        let controller = option.controller;
+        if (!controller) {
+            controller = target.name;
+        }
+        if (option.views === true) {
+            option.views = {
+                '@': {
+                    template: option.template,
+                    controllerAs: option.controllerAs,
+                    controller
+                }
+            };
+            delete option.controllerAs;
+            delete option.controller;
+            delete option.template;
+        } else {
+            option.controller = controller;
         }
         app.config(function ($stateProvider) {
             $stateProvider.state(option.state, option);

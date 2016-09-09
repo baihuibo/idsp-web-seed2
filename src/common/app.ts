@@ -5,5 +5,7 @@ import ngSanitize = require('angular-sanitize');
 import "./base";
 import "./filters";
 import "./services";
+import "./directives/directives";
 
-export const app = module('app', ['base', 'filters', 'services', ngSanitize, String(uiRouter)]);
+export const app = module('app', ['base', 'filters', 'services', 'directives',
+    ngSanitize, String(uiRouter)]);
