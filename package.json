@@ -6,8 +6,17 @@
   "scripts": {
     "build": "webpack",
     "build-watch": "webpack --watch",
+    "build-watch-loop": "webpack --watch --watch-loop",
     "test": "karma start"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baihuibo/idsp-web-seed2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/baihuibo/idsp-web-seed2/issues"
+  },
+  "homepage": "https://github.com/baihuibo/idsp-web-seed2#readme",
   "author": "baihuibo@hotmail.com",
   "license": "ISC",
   "dependencies": {
@@ -28,6 +37,7 @@
     "querystring": "^0.2.0"
   },
   "devDependencies": {
+    "autoprefixer-loader": "^3.2.0",
     "chai": "^3.5.0",
     "css-loader": "^0.24.0",
     "extract-text-webpack-plugin": "^1.0.1",
@@ -54,6 +64,7 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^2.3.1",
     "ts-loader": "^0.8.2",
+    "tslib": "^1.0.0",
     "typescript": "^1.8.10",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.2"
