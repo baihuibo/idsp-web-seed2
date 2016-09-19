@@ -8,7 +8,7 @@ export function Controller(target): any {
             app.controller(target, fn);
         }
     } else if (isFunction(target)) {
-        app.controller(target.name, target);
+        app.controller(target.__className || target.name, target);
     } else {
         throw "@Controller 必须标注在 Function or Class 上";
     }
@@ -29,19 +29,31 @@ export function Route(option) {
         }
         let controller = option.controller;
         if (!controller) {
-            controller = target.name;
+            controller = target.__className || target.name;
         }
-        if (option.views === true) {
-            option.views = {
-                '@': {
-                    template: option.template,
-                    controllerAs: option.controllerAs,
-                    controller
-                }
+        let {views} = option;
+        if (views) {
+            let preViews = {
+                template: option.template,
+                templateUrl: option.templateUrl,
+                controllerAs: option.controllerAs,
+                controller
             };
+
+            if (views === true || typeof views === 'string') {
+                let prop = views === true ? '@' : views;
+                option.views = {
+                    [prop]: preViews
+                };
+            } else if (typeof views === 'object') {
+                views['@'] = preViews;
+                option.views = views;
+            }
+
             delete option.controllerAs;
             delete option.controller;
             delete option.template;
+            delete option.templateUrl;
         } else {
             option.controller = controller;
         }

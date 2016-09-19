@@ -60,6 +60,7 @@
     "regenerator": "^0.8.46",
     "regenerator-loader": "^3.0.0",
     "sinon": "^1.17.5",
+    "string-replace-webpack-plugin": "0.0.3",
     "style-loader": "^0.13.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.3.1",

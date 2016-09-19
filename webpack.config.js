@@ -2,6 +2,7 @@ const webpack = require('webpack');
 var CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
+var StringReplacePlugin = require('string-replace-webpack-plugin');
 
 module.exports = {
     entry: { // 指定入口文件
@@ -24,6 +25,7 @@ module.exports = {
     },
 
     plugins: [
+        new StringReplacePlugin(),
         new webpack.NoErrorsPlugin(),
         // 提取公共文件到 common.bundle.*
         new CommonsChunkPlugin('common.bundle.js'),
@@ -37,7 +39,15 @@ module.exports = {
     // devtool: 'source-map', // 开启调试模式
     module: {
         loaders: [
-            {test: /\.ts$/, loader: 'ng-annotate!ts-loader'},
+            {
+                test: /\.ts$/,
+                loader: StringReplacePlugin.replace('ng-annotate!ts-loader', {
+                    replacements: [{
+                        pattern: /class\s(.*)\s\{/,
+                        replacement: (match, p1) => `class ${p1} { static __className = '${p1}';`
+                    }]
+                })
+            },
             {test: /\.json$/, loader: 'json-loader'},
             {test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader")},
             {test: /\.less$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer!less-loader")},
