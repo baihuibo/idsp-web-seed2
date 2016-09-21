@@ -43,9 +43,14 @@ module.exports = {
                 test: /\.ts$/,
                 loader: StringReplacePlugin.replace('ng-annotate!ts-loader', {
                     replacements: [{
-                        pattern: /class\s*(\w+)\s*(extends\s*\w+)?\s*(implements\s*.*)?\{/,
+                        pattern: /class\s*(\w+)\s*(extends\s*\w+)?\s*(implements\s*.*)?\{/g,
                         replacement: function (m, p1, p2, p3) {
                             return `class ${p1} ${p2 || ''} ${p3 || ''} { public static __className = '${p1}';`
+                        }
+                    }, {
+                        pattern: /(constructor\(.*\)\s*\{)/g,
+                        replacement: function (m, p1) {
+                            return `${p1} "ngInject";`
                         }
                     }]
                 })

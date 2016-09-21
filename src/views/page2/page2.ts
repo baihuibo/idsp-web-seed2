@@ -13,7 +13,7 @@ import "./components/childs2/childs2";
 @Controller
 export class Page2Ctrl {
     constructor(public $scope, public $state) {
-        "ngInject";
+
 
         $scope.$on('$stateChangeSuccess', function () {
             let {state} = $state.current;

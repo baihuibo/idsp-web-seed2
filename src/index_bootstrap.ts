@@ -12,7 +12,6 @@ import "./styles/index.less";// 样式文件
 @BeforeConfig
 class Config {
     constructor($urlRouterProvider) {
-        "ngInject";// 自动注入依赖
         //$urlRouterProvider.when(whenPath, toPath);
         //$urlRouterProvider.otherwise(path);
     }

@@ -5,7 +5,6 @@ import {values} from "lodash";
 @BeforeRun
 export class Global {
     constructor($rootScope, $state) {
-        "ngInject";
         $rootScope.$state = $state;
     }
 }

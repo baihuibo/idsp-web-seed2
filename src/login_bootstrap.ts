@@ -11,7 +11,7 @@ const app = module('app', ['base', 'services']);
 
 app.run(class {
     constructor($rootScope) {
-        "ngInject";
+
 
         $rootScope.name = 'login.boot';
     }

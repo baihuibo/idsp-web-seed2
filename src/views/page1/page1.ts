@@ -11,7 +11,7 @@ import {Controller, Route} from "../../common/annotation";
 @Controller
 export class Page1Ctrl {
     constructor($scope , TestServer) {
-        "ngInject";
+
 
     }
 
